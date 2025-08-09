@@ -4,7 +4,11 @@ files:
   - source: /
     destination: /var/www/html
 hooks: 
-  AfterInstall:
+   BeforeInstall:
+    - location: scripts/noop.sh
+      timeout: 10
+      runas: root
+   AfterInstall:
     - location: scripts/restart_server.sh
       timeout: 30
       runas: root
