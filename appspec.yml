@@ -1,9 +1,9 @@
 version: 0.0
 os: linux
-files:
+files: 
   - source: /
     destination: var/www/html
-hooks:
+hooks: 
   AfterInstall:
     - location: scripts/restart_server.sh
       timeout: 30
