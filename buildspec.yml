@@ -10,4 +10,7 @@ phases:
       - zip -r app.zip index.html appspec.yml scripts/
 artifacts:
   files:
-    - app.zip
+    - appspec.yml
+    - index.html
+    - scripts/**/* 
+  discard-paths: no
